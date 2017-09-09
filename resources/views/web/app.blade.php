@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Home - Agência Palandi</title>
+    <title>@yield('title') - Agência Palandi</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -130,25 +130,25 @@
                 <nav class="overlay-menu">
                     <ul>
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="{{ url('/') }}">Home</a>
                         </li>
                         <li>
-                            <a href="sobre.html">Sobre</a>
+                            <a href="{{ url('/sobre') }}">Sobre</a>
                         </li>
                         <li>
-                            <a href="servicos.html">Serviços</a>
+                            <a href="{{ url('/servicos') }}">Serviços</a>
                         </li>
                         <li>
-                            <a href="parcerias.html">Parcerias</a>
+                            <a href="{{ url('/parcerias') }}">Parcerias</a>
                         </li>
                         <li>
-                            <a href="trabalhe-conosco.html">Vagas</a>
+                            <a href="{{ url('/trabalhe-conosco') }}">Trabalhe Conosco</a>
                         </li>
                         <li>
-                            <a href="planos-mensais.html">Planos Mensais</a>
+                            <a href="{{ url('/planos-mensais') }}">Planos Mensais</a>
                         </li>
                         <li>
-                            <a href="contato.html">Contato</a>
+                            <a href="{{ url('/contato') }}">Contato</a>
                         </li>
                     </ul>
                 </nav>

@@ -1,81 +1,13 @@
 @extends('web.app')
 
+@section('title', 'Home')
+
 @section('content')
 
 <!-- Intro Section -->
-
-<section id="intro" class="section-colored intro-section bgParallax" data-speed="5">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-10 col-sm-offset-1">
-
-                <h1 class="wow fadeInDown">Bem-vindo à Agência Palandi!</h1>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-sm-8 col-sm-offset-2">
-
-                <p class="wow fadeInUp" data-wow-delay=".5s">Mi casa, su casa! Sinta-se à vontade, conheça mais sobre o nosso trabalho e invista em conteúdo com quem entende e sabe de suas necessidades. =)</p>
-
-            </div>
-
-        </div>
-
-        <br><br><br>
-
-        <div class="row">
-
-            <div class="col-sm-8 col-sm-offset-2">
-
-                <div class="row">
-
-                    <div class="col-sm-6 text-right">
-
-                        <a class="btn btn-transparent page-scroll btn-lg wow fadeInLeft" data-wow-delay="1s" href="#services">Serviços</a>
-
-                    </div>
-
-                    <div class="col-sm-6 text-left">
-
-                        <a class="btn btn-primary page-scroll btn-lg wow fadeInRight" data-wow-delay="1.5s" href="#compra-rapida">Compra Rápida</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <span class="scroll-btn">
-
-            <a href="#services" class="page-scroll">
-
-                <span class="mouse">
-
-                    <span></span>
-
-                </span>
-
-            </a>
-
-        </span>
-
-    </div>
-
-</section>
-
-
+@include('web.intro', ['title' => 'Bem-vindo à Agência Palandi!'])
 
 <!-- Services Section -->
-
 <section id="services" class="services-section">
 
     <div class="container">
@@ -182,10 +114,7 @@
 
 </section>
 
-
-
 <!-- Compra Rápida -->
-
 <section id="compra-rapida" class="about-section">
 
     <div class="container">
@@ -624,10 +553,7 @@
 
 </section>
 
-
-
 <!-- Quem somos -->
-
 <section id="quem-somos" class="services-section">
 
     <div class="container">
@@ -686,40 +612,10 @@
 
 </section>
 
-
-
 <!-- Cupom de desconto -->
-
-<section class="section-colored bgParallax" data-speed="2">
-
-    <div class="container">
-
-        <div class="row vertical-align">
-
-            <div class="col-sm-8 text-left">
-
-                <h2 class="wow fadeInUp">Encante-se com a Agência Palandi</h2>
-
-                <h4 class="wow fadeInUp" data-wow-delay=".5s">e aproveite o desconto de 50% no primeiro artigo!</h4>
-
-            </div>
-
-            <div class="col-sm-4">
-
-                <a href="" class="btn btn-lg btn-transparent wow tada" data-wow-delay="1s">Quero meu cupom de desconto</a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
+@include('web.cupom')
 
 <!-- O que estão falando -->
-
 <section id="feedback" class="services-section">
 
     <div class="container">
@@ -1010,10 +906,7 @@
 
 </section>
 
-
-
 <!-- Contato -->
-
 <section id="contact" class="contact-section">
 
     <div class="container">
@@ -1024,180 +917,14 @@
 
         </div>
 
-        <div class="row">
-
-            <div class="col-sm-12">
-
-                <div class="big-card wow bounceInUp">
-
-                    <div class="row">
-
-                        <div class="col-sm-8">
-
-                            <div class="contact-form">
-
-                                <div class="row">
-
-                                    <div class="col-sm-12 text-left">
-
-                                        <form name="sentMessage" id="contactForm" novalidate>
-
-                                            <div class="row">
-
-                                                <div class="col-sm-6">
-
-                                                    <div class="form-group">
-
-                                                        <label for="name">Seu Nome</label>
-
-                                                        <input type="text" class="form-control input-lg" placeholder="Seu Nome *" id="name" required data-validation-required-message="Please enter your name.">
-
-                                                        <p class="help-block text-danger"></p>
-
-                                                    </div>
-
-                                                    <div class="form-group">
-
-                                                        <label for="email">Seu E-mail</label>
-
-                                                        <input type="email" class="form-control input-lg" placeholder="Seu E-mail *" id="email" required data-validation-required-message="Please enter your email address.">
-
-                                                        <p class="help-block text-danger"></p>
-
-                                                    </div>
-
-                                                    <div class="form-group">
-
-                                                        <label for="phone">Seu Telefone</label>
-
-                                                        <input type="tel" class="form-control input-lg" placeholder="Seu Telefone" id="phone">
-
-                                                        <p class="help-block text-danger"></p>
-
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="col-sm-6">
-
-                                                    <div class="form-group">
-
-                                                        <label for="message">Sua Mensagem</label>
-
-                                                        <textarea class="form-control input-lg" placeholder="Sua Mensagem" id="message"></textarea>
-
-                                                        <p class="help-block text-danger"></p>
-
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="clearfix"></div>
-
-                                                <div class="col-sm-12 text-center">
-
-                                                    <div id="success"></div>
-
-                                                    <button type="submit" class="btn send-mesnagem btn-lg btn-primary wow tada">Enviar Mensagem</button>
-
-                                                </div>
-
-                                            </div>
-
-                                        </form>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-sm-4">
-
-                            <div class="right-side-contact">
-
-                                <h3>Informações de Contato</h3>
-
-                                <ul class="contact-info">
-
-                                    <li><i class="fa fa-envelope" aria-hidden="true"></i><br><a href="" alt="">atendimento@agenciapalandi.com</a></li>
-
-                                    <li><i class="fa fa-whatsapp" aria-hidden="true"></i><br>(11) 93802-8008</li>
-
-                                    <li><i class="fa fa-phone" aria-hidden="true"></i><br>(11) 3280-3802</li>
-
-                                </ul>
-
-                                <ul class="redes-info">
-
-                                    <li>
-
-                                        <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-
-                                    </li>
-
-                                    <li>
-
-                                        <a href=""><i class="fa fa-skype" aria-hidden="true"></i></a>
-
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+        <!-- Form Contato Section -->
+        @include('web.form-contato')
 
     </div>
 
 </section>
-
-
 
 <!-- Newsletter -->
-
-<section id="newsletter" class="section-colored bgParallax" data-speed="2">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-12">
-
-                <div class="input-group">
-
-                    <label class="title-fine wow fadeInDown" for="emailNewsletter">Receba Nossos E-mails e Promoções Exclusivas</label>
-
-                </div>
-
-                <div class="input-group input-group-lg wow fadeInUp">
-
-                    <input type="email" class="form-control" placeholder="Deixe aqui o seu melhor e-mail" id="emailNewsletter">
-
-                    <span class="input-group-btn">
-
-                        <button class="btn btn-primary" type="button">Eu Quero!</button>
-
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+@include('web.newsletter')
 
 @endsection
